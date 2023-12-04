@@ -1,0 +1,175 @@
+{
+  "ClassName": "Hunter",
+  "AutoPetAttack": true,
+  "PathReduceSteps": true,
+  "PathFilename": "_pack\\1-20\\Draenei\\9-10_Azuremyst Isle.json",
+  "Pull": {
+    "Sequence": [
+      {
+        "Name": "Serpent Sting (rank 2)",
+        "BeforeCastStop": true,
+        "WhenUsable": true,
+        "Cooldown": 7000,
+        "Key": "2",
+        "AfterCastWaitCombat": true,
+        "Requirements": [
+          "!InMeleeRange",
+          "HasRangedWeapon",
+          "!AutoShot",
+          "HasAmmo"
+        ]
+      }
+    ]
+  },
+  "TargetPet": {
+    "Key": "F5"
+  }
+  "Combat": {
+    "Sequence": [
+      {
+        "Name": "Chimera Shot",
+        "Key": "1",
+        "WhenUsable": true,
+        "Cooldown": 6000,
+        "Requirements": [
+          "HasRangedWeapon",
+          "HasAmmo",
+          "!InMeleeRange",
+          "Serpent Sting"
+        ]
+      },
+      {
+        "Name": "Auto Shot",
+        "Key": "3",
+        "Item": true,
+        "BeforeCastStop": true,
+        "Requirements": [
+          "HasRangedWeapon",
+          "HasAmmo",
+          "!InMeleeRange",
+          "!AutoShot"
+        ]
+      },
+      {
+        "Name": "Arcane Shot",
+        "Key": "5",
+        "Cooldown": 6000,
+        "WhenUsable": true,
+        "Requirements": [
+          "HasRangedWeapon",
+          "HasAmmo",
+          "!InMeleeRange"
+        ]
+      },
+      {
+        "Name": "Stepback",
+        "Key": "S",
+        "PressDuration": 3000,
+        "BaseAction": true,
+        "Requirements": [
+          "TargetsMe",
+          "LastAutoShotMs < 400",
+          "!InMeleeRange",
+          "AutoShot"
+        ],
+        "Interrupt": "RangedSwing < -500 && TargetAlive"
+      },
+      {
+        "Name": "Raptor Strike",
+        "Key": "4",
+        "WhenUsable": true,
+        "AfterCastWaitSwing": true,
+        "Requirements": [
+          "MainHandSwing > -400",
+          "InMeleeRange",
+          "!AutoShot"
+        ]
+      },
+      {
+        "Name": "AutoAttack",
+        "Requirements": [
+          "InMeleeRange",
+          "!AutoAttacking"
+        ]
+      },
+      {
+        "Name": "Approach",
+        "Requirements": [
+          "InMeleeRange"
+        ]
+      },
+      {
+        "Name": "Flanking Strike",
+        "Key": "8",
+        "Cooldown": 30000,
+        "WhenUsable": true,
+        "Requirements": [
+          "InMeleeRange",
+          "!AutoShot"
+        ]
+      }
+    ]
+  },
+  "Adhoc": {
+    "Sequence": [
+      {
+        "Name": "Aspect of the Hawk",
+        "Key": "9",
+        "Requirement": "!Aspect of the Hawk"
+      },
+      {
+        "Name": "feedpet",
+        "Key": "F2",
+        "WhenUsable": true,
+        "Cooldown": 20000,
+        "Requirements": [
+          "Has Pet",
+          "!Pet Happy"
+        ]
+      },
+      {
+        "Name": "sumpet",
+        "Key": "F1",
+        "HasCastBar": true,
+        "Requirements": [
+          "!Has Pet"
+        ]
+      }
+    ]
+  },
+  "Parallel": {
+    "Sequence": [
+      {
+        "Name": "Food",
+        "Key": "6",
+        "Requirement": "Health% < 50"
+      },
+      {
+        "Name": "Drink",
+        "Key": "7",
+        "Requirement": "Mana% < 40"
+      }
+    ]
+  },
+  "NPC": {
+    "Sequence": [
+      {
+        "Name": "Repair",
+        "Key": "C",
+        "Requirement": "Durability% < 35",
+        "PathFilename": "10_Gnome_Vendor.json",
+        "Cost": 6
+      },
+      {
+        "Name": "Sell",
+        "Key": "C",
+        "Requirements": [
+          "BagFull",
+          "BagGreyItem"
+        ],
+        "PathFilename": "10_Gnome_Vendor.json",
+        "Cost": 6
+      }
+    ]
+  }
+}
