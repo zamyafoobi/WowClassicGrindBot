@@ -1,12 +1,11 @@
 {
   "ClassName": "Hunter",
-  "AutoPetAttack": true,
-  "PathReduceSteps": true,
-  "PathFilename": "_pack\\1-20\\Draenei\\9-10_Azuremyst Isle.json",
+  "AutoPetAttack": false,
+  "PathReduceSteps": false,
   "Pull": {
     "Sequence": [
       {
-        "Name": "Serpent Sting (rank 2)",
+        "Name": "Serpent Sting",
         "BeforeCastStop": true,
         "WhenUsable": true,
         "Cooldown": 7000,
@@ -18,12 +17,16 @@
           "!AutoShot",
           "HasAmmo"
         ]
+      },
+      {
+        "Name": "Approach",
+        "Requirements": [
+          "Has Pet",
+          "MinRange > 20"
+        ]
       }
     ]
   },
-  "TargetPet": {
-    "Key": "F5"
-  }
   "Combat": {
     "Sequence": [
       {
@@ -131,6 +134,7 @@
         "Name": "sumpet",
         "Key": "F1",
         "HasCastBar": true,
+        "Cooldown": 10000,
         "Requirements": [
           "!Has Pet"
         ]
@@ -142,12 +146,12 @@
       {
         "Name": "Food",
         "Key": "6",
-        "Requirement": "Health% < 50"
+        "Requirement": "Health% < 70"
       },
       {
         "Name": "Drink",
         "Key": "7",
-        "Requirement": "Mana% < 40"
+        "Requirement": "Mana% < 70"
       }
     ]
   },
@@ -171,5 +175,8 @@
         "Cost": 6
       }
     ]
+  },
+  "TargetPet": {
+    "Key": "F5"
   }
 }
