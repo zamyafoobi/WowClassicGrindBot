@@ -1,7 +1,7 @@
 {
   "ClassName": "Hunter",
   "KeyboardOnly": true,
-  "PathFilename": "_pack\\1-20\\Human\\12-15_Westfall.json",
+  "PathFilename": "Wetlands_2023_12_06_15_06_35.json",
   "NPCMaxLevels_Above": 2,
   "NPCMaxLevels_Below": 5,
   "PathReduceSteps": true,
@@ -117,9 +117,11 @@
   "Adhoc": {
     "Sequence": [
       {
-        "Name": "Aspect of the Hawk",
+        "Name": "Aspect of the Lion",
         "Key": "9",
-        "Requirement": "!Aspect of the Hawk"
+        "Requirements": [
+          "!Has Pet"
+        ]
       },
       {
         "Name": "feedpet",
@@ -158,7 +160,7 @@
         "Name": "Repair",
         "Key": "C",
         "Requirement": "Durability% < 35",
-        "PathFilename": "20_Westfall_Vendor.json",
+        "PathFilename": "wetlands_vendor.json",
         "Cost": 6
       },
       {
@@ -168,7 +170,7 @@
           "BagFull",
           "BagGreyItem"
         ],
-        "PathFilename": "20_Westfall_Vendor.json",
+        "PathFilename": "wetlands_vendor.json",
         "Cost": 6
       }
     ]
