@@ -1,7 +1,8 @@
 {
+  "KeyboardOnly": true,
   "Log": false,
   "ClassName": "Rogue",
-  "PathFilename": "1-5_Gnome.json",
+  "PathFilename": "7_Human.json",
   "Combat": {
     "Sequence": [
       {
@@ -38,7 +39,7 @@
         "Name": "Repair",
         "Key": "C",
         "Requirement": "Durability% < 35",
-        "PathFilename": "1_Gnome_Vendor.json",
+        "PathFilename": "5_Human_Vendor.json",
         "Cost": 6
       },
       {
@@ -48,7 +49,7 @@
           "BagFull",
           "BagGreyItem"
         ],
-        "PathFilename": "1_Gnome_Vendor.json",
+        "PathFilename": "5_Human_Vendor.json",
         "Cost": 6
       }
     ]

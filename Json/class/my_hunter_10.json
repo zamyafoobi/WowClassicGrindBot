@@ -1,12 +1,26 @@
 {
   "ClassName": "Hunter",
-  "KeyboardOnly": true,
-  "PathFilename": "Wetlands_2023_12_06_15_06_35.json",
-  "NPCMaxLevels_Above": 2,
+  "KeyboardOnly": false,
+  "Skin": true,
+  "PathFilename": "_pack\\20-30\\Wetlands\\25-29 Whelp Pharm.json",
+  "NPCMaxLevels_Above": 4,
   "NPCMaxLevels_Below": 5,
-  "PathReduceSteps": true,
+  "PathReduceSteps": false,
   "Pull": {
     "Sequence": [
+      {
+        "Name": "Hunter's Mark'",
+        "BeforeCastStop": false,
+        "Key": "0",
+        "AfterCastWaitCombat": false,
+        "Requirements": [
+          "!InMeleeRange",
+          "HasRangedWeapon",
+          "!AutoShot",
+          "HasAmmo",
+          "!Hunter's Mark"
+        ]
+      },
       {
         "Name": "Serpent Sting",
         "BeforeCastStop": true,
@@ -54,9 +68,9 @@
         ]
       },
       {
-        "Name": "Arcane Shot",
-        "Key": "5",
-        "Cooldown": 6000,
+        "Name": "Multi-Shot",
+        "Key": "1",
+        "Cooldown": 10000,
         "WhenUsable": true,
         "Requirements": [
           "HasRangedWeapon",
@@ -157,15 +171,18 @@
   "NPC": {
     "Sequence": [
       {
-        "Name": "Repair",
+        "Name": "Sell",
         "Key": "C",
-        "Requirement": "Durability% < 35",
+        "Requirements": [
+          "BagFull",
+          "BagGreyItem"
+        ],
         "PathFilename": "wetlands_vendor.json",
         "Cost": 6
       },
       {
-        "Name": "Sell",
-        "Key": "C",
+        "Name": "Interact",
+        "Key": "I",
         "Requirements": [
           "BagFull",
           "BagGreyItem"
