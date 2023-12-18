@@ -1,7 +1,6 @@
 {
   "ClassName": "Hunter",
-  "KeyboardOnly": false,
-  "Skin": true,
+  "KeyboardOnly": true,
   "PathFilename": "_pack\\20-30\\Wetlands\\25-29 Whelp Pharm.json",
   "NPCMaxLevels_Above": 4,
   "NPCMaxLevels_Below": 5,
@@ -26,7 +25,7 @@
         "BeforeCastStop": true,
         "WhenUsable": true,
         "Cooldown": 7000,
-        "Key": "2",
+        "Key": "E",
         "AfterCastWaitCombat": true,
         "Requirements": [
           "!InMeleeRange",
@@ -69,8 +68,19 @@
       },
       {
         "Name": "Multi-Shot",
-        "Key": "1",
+        "Key": "2",
         "Cooldown": 10000,
+        "WhenUsable": true,
+        "Requirements": [
+          "HasRangedWeapon",
+          "HasAmmo",
+          "!InMeleeRange"
+        ]
+      },
+      {
+        "Name": "Chimera Shot",
+        "Key": "Q",
+        "Cooldown": 6000,
         "WhenUsable": true,
         "Requirements": [
           "HasRangedWeapon",
@@ -118,7 +128,7 @@
       },
       {
         "Name": "Flanking Strike",
-        "Key": "8",
+        "Key": "4",
         "Cooldown": 30000,
         "WhenUsable": true,
         "Requirements": [
@@ -131,10 +141,17 @@
   "Adhoc": {
     "Sequence": [
       {
-        "Name": "Aspect of the Lion",
-        "Key": "9",
+        "Name": "Heart of the Lion",
+        "Key": "F6",
         "Requirements": [
           "!Has Pet"
+        ]
+      },
+      {
+        "Name": "Aspect of the Hawk",
+        "Key": "F7",
+        "Requirements": [
+          "!Aspect of the Hawk"
         ]
       },
       {
