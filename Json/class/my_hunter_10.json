@@ -1,10 +1,9 @@
 {
   "ClassName": "Hunter",
-  "KeyboardOnly": true,
   "PathFilename": "_pack\\20-30\\Wetlands\\25-29 Whelp Pharm.json",
   "NPCMaxLevels_Above": 4,
   "NPCMaxLevels_Below": 5,
-  "PathReduceSteps": false,
+  "PathReduceSteps": true,
   "Pull": {
     "Sequence": [
       {
