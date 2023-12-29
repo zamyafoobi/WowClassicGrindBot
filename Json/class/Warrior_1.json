@@ -1,14 +1,40 @@
 {
   "ClassName": "Warrior",
-  "PathFilename": "_pack\\1-20\\Dwarf.Gnome\\1-4_Dun Morogh.json",
+  "PathFilename": "10_Gnome.json",
+    "Pull": {
+    "Sequence": [
+      {
+        "Name": "Charge",
+        "Key": "3",
+        "WhenUsable": true,
+        "Requirement": "SpellInRange:0",
+        "AfterCastWaitMeleeRange": true
+      }
+    ]
+  },
   "Combat": {
     "Sequence": [
+      {
+        "Name": "Battle Shout",
+        "Key": "4",
+        "WhenUsable": true,
+        "Requirement": "!Battle Shout"
+      },
+      {
+        "Name": "Rend",
+        "Key": "5",
+        "WhenUsable": true,
+        "Requirements": [
+          "TargetHealth% > 90",
+          "!Rend"
+        ],
+      },
       {
         "Name": "Heroic Strike",
         "Key": "2",
         "WhenUsable": true,
-        "AfterCastWaitSwing": true,
-        "Requirement": "MainHandSwing > -400"
+        "Requirement": "MainHandSwing > -400",
+        "AfterCastWaitSwing": true
       },
       {
         "Name": "AutoAttack",
@@ -36,7 +62,7 @@
         "Name": "Repair",
         "Key": "C",
         "Requirement": "Durability% < 35",
-        "PathFilename": "1_Gnome_Vendor.json",
+        "PathFilename": "5_Human_Vendor.json",
         "Cost": 6
       },
       {
@@ -46,7 +72,7 @@
           "BagFull",
           "BagGreyItem"
         ],
-        "PathFilename": "1_Gnome_Vendor.json",
+        "PathFilename": "5_Human_Vendor.json",
         "Cost": 6
       }
     ]

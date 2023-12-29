@@ -2,7 +2,8 @@
   "KeyboardOnly": true,
   "Log": false,
   "ClassName": "Rogue",
-  "PathFilename": "7_Human.json",
+  "PathFilename": "_pack\\1-20\\Human\\01-04_Elwynn Forest_Northshire Valley (kobold-wolves-defias).jpg",
+  
   "Combat": {
     "Sequence": [
       {
