@@ -20,17 +20,15 @@
         ]
       },
       {
-        "Name": "Serpent Sting",
+        "Name": "Auto Shot",
+        "Key": "3",
+        "Item": true,
         "BeforeCastStop": true,
-        "WhenUsable": true,
-        "Cooldown": 7000,
-        "Key": "E",
-        "AfterCastWaitCombat": true,
         "Requirements": [
-          "!InMeleeRange",
           "HasRangedWeapon",
-          "!AutoShot",
-          "HasAmmo"
+          "HasAmmo",
+          "!InMeleeRange",
+          "!AutoShot"
         ]
       },
       {
@@ -58,7 +56,7 @@
       },
       {
         "Name": "Mend Pet",
-        "Key": "F4",
+        "Key": "F1",
         "HasCastBar": true,
         "Requirements": [
           "Has Pet",
@@ -69,17 +67,6 @@
         "Name": "Multi-Shot",
         "Key": "2",
         "Cooldown": 10000,
-        "WhenUsable": true,
-        "Requirements": [
-          "HasRangedWeapon",
-          "HasAmmo",
-          "!InMeleeRange"
-        ]
-      },
-      {
-        "Name": "Chimera Shot",
-        "Key": "Q",
-        "Cooldown": 6000,
         "WhenUsable": true,
         "Requirements": [
           "HasRangedWeapon",
@@ -124,38 +111,14 @@
           "InMeleeRange",
           "!AutoShot"
         ]
-      },
-      {
-        "Name": "Flanking Strike",
-        "Key": "4",
-        "Cooldown": 30000,
-        "WhenUsable": true,
-        "Requirements": [
-          "InMeleeRange",
-          "!AutoShot"
-        ]
       }
     ]
   },
   "Adhoc": {
     "Sequence": [
       {
-        "Name": "Heart of the Lion",
-        "Key": "F6",
-        "Requirements": [
-          "!Has Pet"
-        ]
-      },
-      {
-        "Name": "Aspect of the Hawk",
-        "Key": "F7",
-        "Requirements": [
-          "!Aspect of the Hawk"
-        ]
-      },
-      {
         "Name": "feedpet",
-        "Key": "F2",
+        "Key": "F1",
         "WhenUsable": true,
         "Cooldown": 20000,
         "Requirements": [
