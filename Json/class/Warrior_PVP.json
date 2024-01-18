@@ -1,0 +1,79 @@
+{
+  "ClassName": "Warrior",
+  "PathFilename": "10_Gnome.json",
+  "Pull": {
+    "Sequence": [
+      {
+        "Name": "Charge",
+        "Key": "F",
+        "Requirement": "SpellInRange:0",
+        "AfterCastWaitMeleeRange": true
+      }
+    ]
+  },
+  "Combat": {
+    "Sequence": [
+      {
+        "Name": "Overpower",
+        "Key": "1",
+        "WhenUsable": true
+      },
+      {
+        "Name": "Quick Strike",
+        "Key": "4",
+        "WhenUsable": true
+      },
+      {
+        "Name": "AutoAttack",
+        "Requirement": "!AutoAttacking"
+      },
+      {
+        "Name": "Approach",
+        "Log": false
+      },
+      {
+        "Name": "Charge",
+        "Key": "F",
+        "Requirement": "SpellInRange:0"
+      },
+      {
+        "Name": "Intimidating Shout",
+        "Key": "Z",
+        "Requirement": "SpellInRange:0"
+      }
+    ]
+  },
+  "Adhoc": {
+    "Sequence": [
+      {
+        "Cost": 3.1,
+        "Name": "Battle Shout",
+        "Key": "4",
+        "InCombat": "i dont care",
+        "WhenUsable": true,
+        "Requirement": "!Battle Shout"
+      }
+    ]
+  },
+  "NPC": {
+    "Sequence": [
+      {
+        "Name": "Repair",
+        "Key": "C",
+        "Requirement": "Durability% < 35",
+        "PathFilename": "20_Westfall_Vendor.json",
+        "Cost": 6
+      },
+      {
+        "Name": "Sell",
+        "Key": "C",
+        "Requirements": [
+          "BagFull",
+          "BagGreyItem"
+        ],
+        "PathFilename": "20_Westfall_Vendor.json",
+        "Cost": 6
+      }
+    ]
+  }
+}

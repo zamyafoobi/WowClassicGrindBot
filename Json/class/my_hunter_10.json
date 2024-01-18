@@ -4,6 +4,7 @@
   "NPCMaxLevels_Above": 4,
   "NPCMaxLevels_Below": 5,
   "PathReduceSteps": true,
+  "KeyboardOnly":true,
   "Pull": {
     "Sequence": [
       {
@@ -22,7 +23,7 @@
       {
         "Name": "Auto Shot",
         "Key": "3",
-        "Item": true,
+        "HasCastBar": true,
         "BeforeCastStop": true,
         "Requirements": [
           "HasRangedWeapon",
@@ -45,7 +46,7 @@
       {
         "Name": "Auto Shot",
         "Key": "3",
-        "Item": true,
+        "HasCastBar": true,
         "BeforeCastStop": true,
         "Requirements": [
           "HasRangedWeapon",
@@ -61,17 +62,6 @@
         "Requirements": [
           "Has Pet",
           "PetHealth% < 50"
-        ]
-      },
-      {
-        "Name": "Multi-Shot",
-        "Key": "2",
-        "Cooldown": 10000,
-        "WhenUsable": true,
-        "Requirements": [
-          "HasRangedWeapon",
-          "HasAmmo",
-          "!InMeleeRange"
         ]
       },
       {
@@ -119,7 +109,6 @@
       {
         "Name": "feedpet",
         "Key": "F1",
-        "WhenUsable": true,
         "Cooldown": 20000,
         "Requirements": [
           "Has Pet",
@@ -151,7 +140,7 @@
     "Sequence": [
       {
         "Name": "Sell",
-        "Key": "C",
+        "Key": "I",
         "Requirements": [
           "BagFull",
           "BagGreyItem"
